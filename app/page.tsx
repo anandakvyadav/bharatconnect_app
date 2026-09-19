@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function Home() {
   const [posts] = useState([
@@ -13,7 +14,7 @@ export default function Home() {
       <header className="sticky top-0 z-10 bg-white border-b shadow-sm">
         <div className="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
           <h1 className="text-2xl font-bold">🇮🇳 BharatConnect</h1>
-          <button className="px-4 py-1.5 bg-blue-500 text-white rounded-full font-semibold">Log in</button>
+          <Link href="/login" className="px-4 py-1.5 bg-blue-500 text-white rounded-full font-semibold">Log in</Link>
         </div>
       </header>
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
@@ -21,7 +22,7 @@ export default function Home() {
           <div className="bg-white border rounded-lg p-4 flex gap-4 overflow-x-auto">
             {['You','Priya','Rahul','Amit','Sneha'].map(name => (
               <div key={name} className="flex flex-col items-center">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 p-[3px]">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 p-">
                   <div className="w-full h-full rounded-full bg-white flex items-center justify-center font-bold">{name[0]}</div>
                 </div>
                 <span className="text-xs mt-1">{name}</span>
